@@ -103,7 +103,7 @@ function Search() {
                       Title: {book.volumeInfo.title}
                     </strong>
                     <strong>
-                      Author: {book.volumeInfo.authors[0]}
+                      Author: {book.volumeInfo.authors}
                     </strong>
                     <p className="mt-3" >
                       Description: {book.volumeInfo.description}
