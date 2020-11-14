@@ -1,13 +1,23 @@
 import axios from "axios";
 
-// Export an object containing methods we'll use for accessing the GitHub Jobs API
+// Export an object containing methods we'll use for accessing the Google BooksAPIs
 
 export default {
-  searchTerms: function(query) {
+  searchBooks: function(query) {
     return axios.get(
-      "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
-        query +
-        "&limit=1&format=json&origin=*"
+      `https://www.googleapis.com/books/v1/volumes?q=${query}`
     );
+  }, 
+
+  displayBooks: function(){
+    return axios.get("API/books")
+  }, 
+
+  savedBooks: function(bookData){
+    return axios.post("API/books", bookData)
+  },
+
+  deleteBooks: function(id){
+    return axios.delete("API/books", id)
   }
 };
