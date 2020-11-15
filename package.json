@@ -1,0 +1,26 @@
+{
+  "name": "google-books",
+  "version": "1.0.0",
+  "description": "",
+  "main": "booksController.js",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.10.14",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.0",
+    "web-vitals": "^0.2.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
