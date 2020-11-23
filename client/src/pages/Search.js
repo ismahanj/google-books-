@@ -19,9 +19,9 @@ function Search() {
     }, [])
 //displaying book to the page 
    function displayBooks(){
-     API.displayBooks("Harry Potter")
+     API.searchBooks("Harry Potter")
       .then(res => {
-        console.log(res.data.items)
+        console.log(res)
         setBooks(res.data.items)
         })
         
@@ -89,7 +89,7 @@ function Search() {
         <Col size="md-6 sm-12">
           <h1>Results</h1>
           <Row>
-            {books.length ? (
+            {books.length >0 ? (
               <List>
                 {books.map(book => (
                   <ListItem key={book.id}>
